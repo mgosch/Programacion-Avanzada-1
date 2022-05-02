@@ -20,8 +20,9 @@ public class Alumno extends Persona {
 		this.cantMateriasAprobadas = cantMateriasAprobadas;
 	}
 	
+	@Override
 	public void presentarse() {
-		System.out.println("Soy " + getNombre() + " " + getApellido() + ", tengo " + getEdad() + " años y mi dni es "+ getDni());
+		super.presentarse();
 		System.out.println("Soy el alumno número " + cantMateriasAlumnosActivos + " y tengo "+ getCantMateriasAprobadas() + " materias aprobadas");
 	}
 }

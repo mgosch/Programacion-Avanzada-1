@@ -18,8 +18,9 @@ public class Docente extends Persona {
 		this.numeroLegajo = numeroLegajo;
 	}
 	
+	@Override
 	public void presentarse() {
-		System.out.println("Soy " + getNombre() + " " + getApellido() + ", tengo " + getEdad() + " años y mi dni es "+ getDni());
+		super.presentarse();
 		System.out.println("Soy docente, y mi número de legajo es " + getNumeroLegajo());
 	}
 	
