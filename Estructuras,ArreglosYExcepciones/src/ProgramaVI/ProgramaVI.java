@@ -15,7 +15,15 @@ public class ProgramaVI {
         System.out.println("La cantidad de puntuación del texto es: " + cantidadPuntuacion(texto));
         
         cantidadVocalesyConsonantes(texto);
-
+        
+        String textoSBlanco = texto.replace(" ", "");
+        System.out.println("Texto sin blancos: " + textoSBlanco);
+        
+        System.out.println("Ingrese un caracter:");
+        String ch = entradaEscaner.nextLine();
+        String textoCAsterico = texto.replace(ch, "*");
+        System.out.println("Texto sin blancos: " + textoCAsterico);
+        
 	}
 
 	private static int cantidadPuntuacion(String texto) {
@@ -43,5 +51,15 @@ public class ProgramaVI {
         System.out.println("La cantidad de vocales del texto es: " + countv);
         System.out.println("La cantidad de consonates del texto es: " + countc);
 	}
+	
+    public static int contarCaracteres(String cadena, char caracter) {
+        int posicion, contador = 0;
+        posicion = cadena.indexOf(caracter);
+        while (posicion != -1) {
+            contador++;
+            posicion = cadena.indexOf(caracter, posicion + 1);
+        }
+        return contador;
+   }
 
 }
